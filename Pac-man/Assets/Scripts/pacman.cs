@@ -26,17 +26,25 @@ public class pacman : MonoBehaviour {
 
     void Pinput()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow)){
+       if (Input.GetKeyDown(KeyCode.LeftArrow)){
+            GetComponent<Transform> (). eulerAngles = new Vector3 (0,0,-180);
             arah = Vector2.left;
+
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow)){          
+        else if (Input.GetKeyDown(KeyCode.RightArrow)){
+         GetComponent<Transform> (). eulerAngles = new Vector3 (0,0,0);          
             arah = Vector2.right;
+            
         }
-        else if (Input.GetKeyDown(KeyCode.UpArrow)){           
+        else if (Input.GetKeyDown(KeyCode.UpArrow)){  
+             GetComponent<Transform> (). eulerAngles = new Vector3 (0,0,90);         
             arah = Vector2.up;
+            
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow)){            
+        else if (Input.GetKeyDown(KeyCode.DownArrow)){     
+            GetComponent<Transform> (). eulerAngles = new Vector3 (0,0,-90);      
             arah = Vector2.down;
+          
         }
     }
 
